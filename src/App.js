@@ -1,9 +1,8 @@
+import './assets/styles/global.css';
+import GridContainer from './components/GridContainer/GridContainer';
+
 function App() {
-  return (
-    <div>
-      <h1>Hello</h1>
-    </div>
-  );
+  return <GridContainer />;
 }
 
 export default App;
