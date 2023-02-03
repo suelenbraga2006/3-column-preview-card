@@ -5,7 +5,7 @@ import sedans from '../../assets/images/icon-sedans.svg';
 import suvs from '../../assets/images/icon-suvs.svg';
 import luxury from '../../assets/images/icon-luxury.svg';
 
-function Card({ bgcolor, icon }) {
+function Card({ bgcolor, icon, name }) {
   let image;
 
   if (icon === 'sedans') {
@@ -19,7 +19,7 @@ function Card({ bgcolor, icon }) {
   return (
     <Container bgcolor={bgcolor}>
       {image}
-      <h1>Sedans</h1>
+      <h1>{name}</h1>
       <p>
         Choose a sedan for its affordability and excellent fuel economy. Ideal
         for cruising in the city or on your next road trip.

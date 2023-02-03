@@ -6,9 +6,9 @@ import { Container } from './styles';
 function GridContainer() {
   return (
     <Container>
-      <Card bgcolor="#E28625" icon="sedans" />
-      <Card bgcolor="#006971" icon="suvs" />
-      <Card bgcolor="#004140" icon="luxury" />
+      <Card bgcolor="#E28625" icon="sedans" name="SEDANS" />
+      <Card bgcolor="#006971" icon="suvs" name="SUVS" />
+      <Card bgcolor="#004140" icon="luxury" name="LUXURY" />
     </Container>
   );
 }
