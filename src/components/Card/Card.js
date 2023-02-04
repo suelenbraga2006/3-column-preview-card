@@ -5,25 +5,22 @@ import sedans from '../../assets/images/icon-sedans.svg';
 import suvs from '../../assets/images/icon-suvs.svg';
 import luxury from '../../assets/images/icon-luxury.svg';
 
-function Card({ bgcolor, icon, name }) {
+function Card({ product }) {
   let image;
 
-  if (icon === 'sedans') {
+  if (product.icon === 'sedans') {
     image = <img src={sedans} alt="Sedans" />;
-  } else if (icon === 'suvs') {
+  } else if (product.icon === 'suvs') {
     image = <img src={suvs} alt="Suvs" />;
   } else {
     image = <img src={luxury} alt="Luxury" />;
   }
 
   return (
-    <Container bgcolor={bgcolor}>
+    <Container bgcolor={product.bgcolor}>
       {image}
-      <h1>{name}</h1>
-      <p>
-        Choose a sedan for its affordability and excellent fuel economy. Ideal
-        for cruising in the city or on your next road trip.
-      </p>
+      <h1>{product.title}</h1>
+      <p>{product.text}</p>
       <a href="/info">Learn More</a>
     </Container>
   );

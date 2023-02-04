@@ -4,11 +4,31 @@ import Card from '../Card/Card';
 import { Container } from './styles';
 
 function GridContainer() {
+  const products = [
+    {
+      icon: 'sedans',
+      title: 'SEDANS',
+      text: 'Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city or on your next road trip.',
+      bgcolor: '#E28625',
+    },
+    {
+      icon: 'suvs',
+      title: 'SUVS',
+      text: 'Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation and off-road adventures.',
+      bgcolor: '#006971',
+    },
+    {
+      icon: 'luxury',
+      title: 'LUXURY',
+      text: 'Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and arrive in style. ',
+      bgcolor: '#004140',
+    },
+  ];
   return (
     <Container>
-      <Card bgcolor="#E28625" icon="sedans" name="SEDANS" />
-      <Card bgcolor="#006971" icon="suvs" name="SUVS" />
-      <Card bgcolor="#004140" icon="luxury" name="LUXURY" />
+      {products.map((product, i) => {
+        return <Card key={i} bgcolor="#E28625" product={product} />;
+      })}
     </Container>
   );
 }
